@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-image: url(https://i.ibb.co/xf1XNMn/pexels-eberhard-grossgasteiger-1624496.jpg); 
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: rgb(255,255,255,0.85);
+  font-family: Verdana, sans-serif;
+  text-shadow: -2px 0 black, 0 -2px black;
+  margin: 0;
+}
+
+
+#navbar {
+  display: flex;
+  background-color: rgb(0,0,0,0.75);
+  padding-top: 15px;
+  height: 60px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.nav-center {
+  margin: 0 auto;
+}
+
+.nav-center > a {
+  text-decoration: none;
+  color: rgb(255,255,255,0.85);
+  font-size: 1.25rem;
+  padding: 0 15px;
+  text-shadow: 1px 0 black,0 1px black;
+}
+
+.nav-center > a:active {
+  color: rgb(255,255,255);
+  filter: contrast(150%);
+}
+
+#intro {
+  width: 100%;
+}
+
+#welcome-section {
+  display: block;
+  margin: 0 100px; 
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+#welcome-section > h1 {
+  text-align: center;
+  display: block;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.my-image {
+  display: block;
+  height: 300px;
+  width: 300px;
+  margin: 100px auto 0;
+  border-radius: 50%;
+  filter: grayscale(0.35);
+}
+
+.my-image:hover {
+  filter: grayscale(0);
+  scale: 1.05;
+}
+
+#projects {
+  display: grid;
+  font-size: 1.125rem;
+  padding: 90px 0;
+  width: 100%;
+  place-items: end center;
+  margin: 0;
+}
+
+#projects > h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.project-title > h2 {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.items {
+  display: block;
+  margin: 0 auto;
+}
+
+.items > p {
+  text-align: center;
+}
+
+.items > a > img {
+  object-fit: cover;
+  border: 10px solid rgb(255,255,255);
+  border-radius: 35px 100px;
+  width: 900px;
+  aspect-ratio: auto;
+}
+
+.items > a > img:hover {
+  aspect-ratio: auto;
+  border: 10px solid rgb(255,255,255, 0.8);
+  scale: 1.025;
+}
+
+#links {
+  height: 100vh;
+}
+
+#link-items {
+  width: 100%;
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.Git, .Camp {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-link > a {
+  text-decoration: none;
+  color: rgb(255,255,255,0.85);
+  font-size: 1.5rem;
+  padding-right: 140px;
+  padding-left: 140px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.profile-link > a > p {
+  padding-top: 30px;
+}
+
+.profile-link > a > img {
+  height: 200px;
+  width: 200px;
+  object-fit: scale-down;
+  margin: 0 auto;
+  filter: contrast(200%) invert(1) drop-shadow(10px 6px 5px rgb(255,255,255, 0.5));
+  aspect-ratio: auto;
+}
+
+.profile-link > a > img:hover {
+  scale: 1.125;
+}
+
+#links > h1 {
+  padding-top: 110px;
+  text-align: center;
+  margin: 0 50px;
+}
+
+#social {
+  height: calc(100vh - 80px);
+}
+
+#social > h1 {
+  padding-top: 110px;
+  text-align: center;
+}
+
+.sites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sites > a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 0 50px;
+  position: relative;
+  top: 225px;
+}
+
+.sites > a:hover {
+  scale: 1.5;
+  position: relative;
+  top: 225px;
+  right: 20px;
+}
+
+#footer {
+  height: 60px;
+  background-color: rgb(255,255,255,0.75);
+  color: rgb(0,0,0,0.6);
+  text-shadow: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#footer > p {
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #welcome-section, #projects, #links {
+    margin: 0 50px;
+  }
+  #welcome-section, #projects, #links > h1 {
+    text-align: justify;
+  }
+  #projects {
+    width: 100%;
+    margin: 0;
+  }
+  .items{
+    width: auto;
+  }
+  .items > a > img {
+    width: 700px;
+    scale: 0.90;
+  }
+  .items > a > img:hover { 
+    scale: 0.95;
+  }
+  .profile-link > a {
+    padding: 100px 75px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #welcome-section, #projects, #links {
+    margin: 0 20px;
+  }
+  #welcome-section, #projects, #links > h1 {
+    text-align: justify;
+  }
+  #projects {
+    width: 100%;
+    margin: 0;
+  }
+  .items {
+    width: auto;
+  }
+  .items > a > img { 
+    width: 460px;
+    scale: 0.90;
+    border-radius: 15px 50px;
+    border: solid 5px white;
+  }
+  .items > a > img:hover { 
+    scale: 0.92;
+    border: solid 5px rgb(255,255,255,0.5);
+  }
+  .profile-link > a {
+    display: grid;
+    padding: 50px 20px 0;
+    scale: 0.75;
+  }
+  .sites > a {
+    padding: 0 30px;
+  }
+  #links > h1 {
+    text-align: justify;
+    width: 380px;
+    margin: 0;
+  }
+  .nav-center > a {
+    padding: 0 5px;
+  }
+}
+
